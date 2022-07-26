@@ -1,9 +1,12 @@
 package com.oopsmails.configmgmt.demo;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.stereotype.Component;
 
-@ConfigurationProperties("app")
+//@ConfigurationProperties("app")
+@ConfigurationProperties(prefix = "app")
+@ConfigurationPropertiesScan
 @Component
 public class ApplicationEnvironmentProperties {
 
